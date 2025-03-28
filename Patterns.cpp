@@ -13,12 +13,8 @@ Output:
 * * *
 * * *
 ********************************************************************************************************************************************/
-void pat1()
+void pat1(int n)
 {
-	unsigned short n;
-	cout << "Hi Sam, please enter the value of n" << endl;
-	cin >> n;
-
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -36,9 +32,53 @@ void pat1()
 
 }
 
+
+/*
+Sam is making a forest visualizer. An N-dimensional forest is represented by the pattern of size NxN filled with ‘*’.
+
+An N/2-dimensional forest is represented by the lower triangle of the pattern filled with ‘*’.
+
+For every value of ‘N’, help sam to print the corresponding N/2-dimensional forest.
+
+Example:
+Input:  ‘N’ = 3
+
+Output: 
+* 
+* *
+* * *
+
+*/
+
+void pat2(int n)
+{
+	for(int i = 0; i < n; i++)
+	{
+		for(int j = 0; j <= i; j++)
+		{
+			if(j == i)
+			{
+				cout << "*" << endl;  
+			}
+			else
+			{
+				cout << "* ";
+			}
+		}
+	}
+}
+
+
 int main()
 {
-	pat1();
-	//pat2();
+
+	unsigned short n;
+	cout << "Hi Sam, please enter the value of n" << endl;
+	cin >> n;
+
+	pat1(n);
+	cout << endl;
+	pat2(n);
+	cout << endl;
 	return 0;
 }
