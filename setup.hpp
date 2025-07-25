@@ -21,3 +21,13 @@ using namespace std;
             cout << nums[i] << endl;
         }
     }
+
+    void print_input_2(vector<vector<int>> &nums) {
+        //cout << nums.size();
+        for(auto it : nums) {
+            for(auto itr : it) {
+                cout << itr;
+            }
+            cout << endl;
+        }
+    }
