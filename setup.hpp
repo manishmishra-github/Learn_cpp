@@ -18,7 +18,12 @@ using namespace std;
     void print_input(vector<int> &nums) {
         //cout << nums.size();
         for(int i = 0; i < nums.size(); i++) {
-            cout << nums[i] << endl;
+            if(i == nums.size() - 1) {
+                cout << nums[i] << endl;
+            }
+            else {
+                cout << nums[i] << ", ";
+            }
         }
     }
 

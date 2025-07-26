@@ -6,17 +6,49 @@ public:
         vector<vector<int>>ans;
         int n = nums.size();
         sort(nums.begin(), nums.end());
-        //print_input(nums);
+        print_input(nums);
         for(int i = 0; i < n; ++i) {
-            unordered_map<int>mmap;
-            j = i + 1;
-            k = n - 1;
+            //set<int>mmap;
 
-            while (j < k) {
+            if(i != 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            
+            int j = i + 1;
+            int k = n - 1;
+            cout << "i = "<< i <<" j = " << j << " k = " << k << endl << "start run" << endl;
+            while (j < k) {  
+                int sum = nums[i] + nums[j] + nums[k];
+                cout << "i = "<< i <<" j = " << j << " k = " << k << " SUM  = " << sum <<endl;
+                if (sum > 0) {
+                    k--;
+                    while(k > j &&  nums[k] == nums[k + 1]) {
+                        k--;
+                    }
+                    
+                } else if (sum < 0) {
+                    j++;
+                    while(j < k && nums[j] == nums[j - 1]) {
+                        j++;
+                    }
+                } else {
+                    vector<int> temp = {nums[i], nums[j], nums[k]};
+                    ans.push_back(temp);
+                    j++;
+                    k--;
+                    while(j < k && nums[j] == nums[j - 1]) {
+                        j++;
+                    }
+                    while(k > j && nums[k] == nums[k + 1]) {
+                        k--;
+                    }
+                }
                 
             }
+            cout << "END LOOP" << endl;
 
         }
+        return ans;
         
     }
 };
