@@ -7,7 +7,7 @@ public:
         int n = nums.size();
         sort(nums.begin(), nums.end());
         print_input(nums);
-        for(int i = 0; i < n; ++i) {
+        for(int i = 0; i < n - 2; ++i) {
             //set<int>mmap;
 
             if(i != 0 && nums[i] == nums[i - 1]) {
