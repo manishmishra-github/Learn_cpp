@@ -31,7 +31,7 @@ using namespace std;
         //cout << nums.size();
         for(auto it : nums) {
             for(auto itr : it) {
-                cout << itr;
+                cout << itr << ",";
             }
             cout << endl;
         }
