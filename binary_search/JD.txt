@@ -1,0 +1,8 @@
+What You'll Have
+
+Polyglot Mastery: Exceptional command of at least one major systems language (C++, Rust, Java) for low-latency components, or Python for data and ML workflows.
+Distributed Systems Expertise: Deep experience building high-throughput, fault-tolerant systems using modern messaging standards (e.g., Kafka, ZeroMQ, NATS).
+Systems-Level Intuition: You are comfortable debugging and profiling at the OS level, understanding memory management, CPU architecture, and network stack optimization.
+Data Infrastructure: Familiarity with the modern data stack, including time-series databases, object stores, and streaming frameworks like Apache Flink or Spark Streaming.
+Engineering Rigor: You write clean, testable, and reliable code. You understand that in this environment, a system failure can cost millions in seconds.
+Bonus - ML Engineering: Experience with model serving, feature stores, or integrating ML pipelines into live production systems is highly valued. (Note: Previous finance experience is not required).
